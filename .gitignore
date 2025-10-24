@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.Python
+build/
+dist/
+
+# Virtual environment (common names, uncomment if you use them)
+# venv/
+# .venv/
+# env/
+# .env/
+# .pipenv/
+
+# IDEs and editors
+.idea/                  # PyCharm
+.vscode/                # VS Code
+*.swp                   # Vim swap files
+*~                      # Emacs backup files
+.DS_Store               # macOS
+Thumbs.db               # Windows
+
+# Jupyter Notebooks (uncomment if you have notebooks and want to ignore them)
+# .ipynb_checkpoints/
+# *.ipynb
+
+# Data (Crucial for deep learning projects - ignore the entire data directory)
+data/
+
+# Model checkpoints and logs (common for deep learning projects, uncomment if applicable)
+# models/                 # If you have a separate 'models' directory for trained weights at the project root
+# logs/                   # Training logs
+# runs/                   # TensorBoard logs (e.g., from PyTorch Lightning, Keras callbacks)
+
+# Environment variables (if you use a .env file for sensitive info)
+# .env
+# *.env
+
+# Testing
+.pytest_cache/
+
+# DVC (Data Version Control - if you use DVC for data management)
+# .dvc/
+# *.dvc
