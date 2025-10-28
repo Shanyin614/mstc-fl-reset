@@ -333,14 +333,14 @@ class HierarchicalGCNClustering:
         """
         兼容旧调用：输入距离/邻接，输出包含 micro_clusters 的字典
         """
-        # 1) 用距离矩阵生成临时特征（不改你现有的数据流）
+        # 1) 用距离矩阵生成临时特征
         client_features = self._build_features_from_distance(distance_matrix)  # [N, *]
 
         # 2) Micro：KMeans
         kmeans = KMeans(n_clusters=self.n_micro_clusters, random_state=42, n_init=10)
         micro_labels = kmeans.fit_predict(client_features)
 
-        # 3) Meso：沿用你已有的 GCN+谱聚类
+        # 3) Meso：沿用已有的 GCN+谱聚类
         meso_labels, embeddings = self._cluster_meso(client_features, distance_matrix)
 
         # 4) 组装为旧格式输出（run_mstc_fl.py 只用到了 micro_clusters）

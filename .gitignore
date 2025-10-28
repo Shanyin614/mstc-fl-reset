@@ -7,7 +7,8 @@ __pycache__/
 .Python
 build/
 dist/
-
+result/
+data/
 # Virtual environment (common names, uncomment if you use them)
 # venv/
 # .venv/
